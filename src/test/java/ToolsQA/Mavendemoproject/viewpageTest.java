@@ -11,7 +11,7 @@ public class viewpageTest {
 	public void TestFireFox(){
 	System.out.println("Testing");
 	
-	System.setProperty("webdriver.gecko.driver", "./geckodriver\\geckodriver.exe");
+	System.setProperty("webdriver.gecko.driver", "F:\\geckodriver\\geckodriver.exe");
 	WebDriver driver=new FirefoxDriver();
 	//WebDriver driver=new FirefoxDriver();
 	driver.manage().window().maximize();
