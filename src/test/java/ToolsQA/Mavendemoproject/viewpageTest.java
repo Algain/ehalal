@@ -12,8 +12,6 @@ public class viewpageTest {
 	@Test
 	public void TestFireFox() throws InterruptedException{
 	// turn off htmlunit warnings
-	java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(java.util.logging.Level.OFF);
-	java.util.logging.Logger.getLogger("org.apache.http").setLevel(java.util.logging.Level.OFF);
 
 	System.out.println("Testing");
 	
@@ -26,7 +24,8 @@ public class viewpageTest {
 	WebDriver driver = new HtmlUnitDriver();
 	driver.get("http://admin.ehalal.com/supplier/login");
 	System.out.println("Title of the page "+ driver.getTitle());
-	
+	java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(java.util.logging.Level.OFF);
+	java.util.logging.Logger.getLogger("org.apache.http").setLevel(java.util.logging.Level.OFF);	
 	WebElement username = driver.findElement(By.id("username"));
 	username.sendKeys("algain@theflyingcoders.com");
 	
